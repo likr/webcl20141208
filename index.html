@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>WebCL応用</title>
+<link rel="stylesheet" href="bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+  <h1>Mandelbrot</h1>
+  <div>
+    <div class="form-group">
+      <label>OpenCL Device</label>
+      <select class="form-control" id="devices"></select>
+    </div>
+    <div class="form-group">
+      <label>Width</label>
+      <input type="number" min="100" step="100" value="300" class="form-control" id="width">
+    </div>
+    <div class="form-group">
+      <label>Max iterations</label>
+      <input type="number" min="1" value="256" class="form-control" id="max-iter">
+    </div>
+    <button class="btn btn-lg btn-primary" id="run-button" disabled>Run</button>
+  </div>
+  <div>
+    <p>Computation time: <span id="time"></span> seconds</p>
+    <canvas id="display"></canvas>
+  </div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="webcl20141208.js"></script>
+</body>
+</html>
